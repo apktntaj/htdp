@@ -1,5 +1,4 @@
 
-
 #_{:clj-kondo/ignore [:namespace-name-mismatch]}
 (ns fixed-size-data.exercises)
 
@@ -23,11 +22,10 @@
 ;; EXCERCISE 1.3
 ;; create an expression using string primitives that adds "_" at position i
 
-#_{:clj-kondo/ignore [:redefined-var]}
-(defn underscored [string at]
+(defn underscored-at [string at]
   (str (subs string 0 at) "_" (subs string at)))
 
-(underscored "hello" 2) ; => "he_llo"
+(underscored-at "hello" 2) ; => "he_llo"
 
 ;; EXCERCISE 1.4
 ;; create an expression using string primitives that adds deleted at position i
@@ -36,3 +34,14 @@
   (str (subs s 0 (dec i)) (subs s i)))
 
 (delete-at "hello" 2) ; => "hllo"
+
+
+;; Not idiomatic solution
+(defn delete-at-bad [index string]
+  (str (subs string 0 index) (subs string (inc index))))
+
+;; Idiomatic solution
+(defn delete-at-good [string index]
+  (str (subs string 0 index) (subs string index)))
+
+(delete-at-bad 2 "hello") ; => "hllo"
