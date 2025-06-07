@@ -13,6 +13,8 @@
 
 ;; EXCERCISE 1.2
 ;; Add "_" between two strings.
+
+
 (defn underscored [s1 s2]
   (str s1 "_" s2))
 
@@ -21,14 +23,16 @@
 ;; EXCERCISE 1.3
 ;; create an expression using string primitives that adds "_" at position i
 
-(defn underscored-at [string idx]
-  (str (subs string 0 idx) "_" (subs string idx)))
+#_{:clj-kondo/ignore [:redefined-var]}
+(defn underscored [string at]
+  (str (subs string 0 at) "_" (subs string at)))
 
-
-(underscored-at "hello" 2) ; => "he_llo"
+(underscored "hello" 2) ; => "he_llo"
 
 ;; EXCERCISE 1.4
 ;; create an expression using string primitives that adds deleted at position i
 
-(defn delete-at [i s]
+(defn delete-at [s i]
   (str (subs s 0 (dec i)) (subs s i)))
+
+(delete-at "hello" 2) ; => "hllo"
