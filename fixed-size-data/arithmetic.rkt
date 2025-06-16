@@ -121,3 +121,5 @@
     [(= (image-width img) (image-height img)) "square"]))
 
 (image-classify cat)
+
+

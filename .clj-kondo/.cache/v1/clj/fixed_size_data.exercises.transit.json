@@ -1,1 +1,0 @@
-["^ ","~$x",["^ ","~:row",4,"~:col",1,"~:name","~$x","~:ns","~$fixed_size_data.exercises","~:top-ns","^4","~:type","~:pos-int"],"~$y",["^ ","^0",5,"^1",1,"^2","~$y","^3","^4","^5","^4","^6","^7"],"~$distance-to-origin",["^ ","^0",9,"^1",1,"~:fixed-arities",["~#set",[2]],"^2","^8","^3","^4","^5","^4","^6","~:fn"],"~:filename","/home/dev/htdp/fixed-size-data/exercises.clj"]
